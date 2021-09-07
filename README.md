@@ -1,5 +1,6 @@
 # vue3-admin-template
-
+> 基于Vue3、Element-Plus的后台管理系统模板
+> 基于vue-admin-template设计进行升级
 ## Project setup
 ```
 yarn install
