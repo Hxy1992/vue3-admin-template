@@ -1517,6 +1517,11 @@
     "@typescript-eslint/types" "4.29.3"
     eslint-visitor-keys "^2.0.0"
 
+"@vitejs/plugin-vue@^1.6.0":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.6.1.tgz#a40a06661af61fdc1bebdfb811b28f50ad39dfb3"
+  integrity sha512-tX2Ju8fOyEtfstfmwjfSJcstTFXwzdFAUbYJ5bWWifvKIgbe6B0FbM8l3Wb7wOaaxKn4FYkii7WQnAPcsTqaIA==
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz?cache=0&sync_timestamp=1602851122331&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fbabel-helper-vue-jsx-merge-props%2Fdownload%2F%40vue%2Fbabel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"
@@ -4545,6 +4550,11 @@ es-to-primitive@^1.2.1:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
+
+esbuild@^0.12.17:
+  version "0.12.25"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.25.tgz#c2131cef022cf9fe94aaa5e00110b27fc976221a"
+  integrity sha512-woie0PosbRSoN8gQytrdCzUbS2ByKgO8nD1xCZkEup3D9q92miCze4PqEI9TZDYAuwn6CruEnQpJxgTRWdooAg==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -9147,7 +9157,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.27, postcss@^7.0.3
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.10:
+postcss@^8.1.10, postcss@^8.3.6:
   version "8.3.6"
   resolved "https://registry.nlark.com/postcss/download/postcss-8.3.6.tgz?cache=0&sync_timestamp=1626882933935&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpostcss%2Fdownload%2Fpostcss-8.3.6.tgz#2730dd76a97969f37f53b9a6096197be311cc4ea"
   integrity sha1-JzDddql5afN/U7mmCWGXvjEcxOo=
@@ -9796,6 +9806,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rollup@^2.38.5:
+  version "2.56.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.56.3.tgz#b63edadd9851b0d618a6d0e6af8201955a77aeff"
+  integrity sha512-Au92NuznFklgQCUcV96iXlxUbHuB1vQMaH76DHl5M11TotjOHwqk9CwcrT78+Tnv4FN9uTBxq6p4EJoYkpyekg==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -11301,6 +11318,18 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+vite@^2.5.2:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.5.4.tgz#2dab98835be64c4157eba225e0becb9d373f608a"
+  integrity sha512-EAdbX8A6MJaqC6UuicZtoxY9+BdaBdcGVaROXvsu+vnlGyzZzm63QQgANJryIB0DvenveHAoCriN+dAnoS+TIQ==
+  dependencies:
+    esbuild "^0.12.17"
+    postcss "^8.3.6"
+    resolve "^1.20.0"
+    rollup "^2.38.5"
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 vm-browserify@^1.0.1:
   version "1.1.2"

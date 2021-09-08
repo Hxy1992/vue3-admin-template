@@ -8,7 +8,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "vite"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -45,7 +46,9 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "@vitejs/plugin-vue": "^1.6.0",
+    "vite": "^2.5.2"
   },
   "license": "MIT"
 }
