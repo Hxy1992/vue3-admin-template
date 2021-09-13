@@ -1,7 +1,7 @@
 # vue3-admin-template（测试）
-> 基于Vue3、Element-Plus的后台管理系统模板
-> 基于vue-admin-template设计进行升级
-> GitHub Action持续集成测试
+> + 基于Vue3、Element-Plus的后台管理系统模板
+> + 基于vue-admin-template设计进行升级
+> + GitHub Action持续集成测试
 ## Project setup
 ```
 yarn install
