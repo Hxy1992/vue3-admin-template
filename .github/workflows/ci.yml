@@ -30,7 +30,7 @@ jobs:
     - name: Install and Build
       run: |
         yarn install --frozen-lockfile
-        yarn run build:prod
+        yarn run build
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
