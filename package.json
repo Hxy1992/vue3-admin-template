@@ -3,6 +3,7 @@
   "description": "A vue3 admin template with element-plus & axios & iconfont & permission control & lint",
   "version": "0.1.0",
   "author": "huangxy,lmm",
+  "homepage": "https://hxy1992.github.io/vue3-admin-template",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
