@@ -1,23 +1,10 @@
 {
-  "name": "geeker-admin",
+  "name": "vue3-admin-template",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.0.0",
   "type": "module",
-  "description": "geeker-admin open source management system",
-  "author": {
-    "name": "Geeker",
-    "email": "848130454@qq.com",
-    "url": "https://github.com/HalseySpicy"
-  },
+  "description": "Vue3统一框架",
   "license": "MIT",
-  "homepage": "https://github.com/HalseySpicy/Geeker-Admin",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:HalseySpicy/Geeker-Admin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/HalseySpicy/Geeker-Admin/issues"
-  },
   "scripts": {
     "dev": "vite",
     "serve": "vite",

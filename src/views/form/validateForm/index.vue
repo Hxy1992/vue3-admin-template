@@ -52,7 +52,7 @@ import { ElMessage } from "element-plus";
 
 const ruleFormRef = ref<FormInstance>();
 const ruleForm = reactive({
-  name: "Geeker-Admin",
+  name: "vue3-admin-template",
   phone: "",
   region: "",
   date1: "",

@@ -8,7 +8,7 @@ import piniaPersistConfig from "@/stores/helper/persist";
 const keepAliveStore = useKeepAliveStore();
 
 export const useTabsStore = defineStore({
-  id: "geeker-tabs",
+  id: "hi-vue3-admin-tabs",
   state: (): TabsState => ({
     tabsMenuList: []
   }),
@@ -72,5 +72,5 @@ export const useTabsStore = defineStore({
       });
     }
   },
-  persist: piniaPersistConfig("geeker-tabs")
+  persist: piniaPersistConfig("hi-vue3-admin-tabs")
 });

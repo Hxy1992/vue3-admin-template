@@ -32,7 +32,9 @@ export const useTable = (
     // 初始化默认的查询参数
     searchInitParam: {},
     // 总参数(包含分页和查询参数)
-    totalParam: {}
+    totalParam: {},
+    // 表格数据加载
+    tableLoading: false
   });
 
   /**
@@ -57,9 +59,11 @@ export const useTable = (
   const getTableList = async () => {
     if (!api) return;
     try {
+      state.tableLoading = true;
       // 先把初始化参数和分页参数放到总参数里面
       Object.assign(state.totalParam, initParam, isPageable ? pageParam.value : {});
       let { data } = await api({ ...state.searchInitParam, ...state.totalParam });
+      state.tableLoading = false;
       dataCallBack && (data = dataCallBack(data));
       state.tableData = isPageable ? data.list : data;
       // 解构后台返回的分页数据 (如果有分页更新分页信息)
@@ -68,6 +72,7 @@ export const useTable = (
         updatePageable({ pageNum, pageSize, total });
       }
     } catch (error) {
+      state.tableLoading = false;
       requestError && requestError(error);
     }
   };
