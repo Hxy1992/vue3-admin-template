@@ -11,5 +11,5 @@ dist
 .husky
 .local
 /bin
-/src/mock/*
+/mock/*
 stats.html
