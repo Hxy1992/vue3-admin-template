@@ -89,7 +89,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
       console.log("submit!");
     } else {
       console.log("error submit!");
-      return false;
+      // return false;
     }
   });
 };

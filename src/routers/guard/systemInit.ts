@@ -11,6 +11,7 @@ import { log } from "./helper";
 // import { BaseMapEnum } from "@/enums/mittBusEnum";
 import { useUserStore } from "@/stores/modules/user";
 import { LOGIN_URL } from "@/config";
+import { initMap } from "vue3-use-cesium";
 
 /**
  * 系统初始化 前置导航守卫
@@ -53,5 +54,23 @@ export function createSystemInitBefore(router: Router) {
 
     // 创建websocket
     // createSocket();
+
+    // CDN
+    if (to.meta.hasMap) {
+      // CDN
+      await initMap(
+        [
+          `https://unpkg.com/cesium@1.105.0/Build/Cesium/Cesium.js`,
+          `https://unpkg.com/cesium@1.105.0/Build/Cesium/Widgets/widgets.css`
+        ],
+        {
+          imagery: "gd-img"
+        }
+      );
+      // 本地
+      // await initMap([`/CesiumV1.105/Cesium.js`, `/CesiumV1.105/Widgets/widgets.css`], {
+      //   imagery: "gd-img"
+      // });
+    }
   });
 }

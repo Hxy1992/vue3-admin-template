@@ -14,6 +14,7 @@
     "build:pro": "vue-tsc && vite build --mode production",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
     "preview": "npm run build:dev && vite preview",
+    "preview-only": "vite preview",
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
     "lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
@@ -44,6 +45,7 @@
     "vue": "^3.4.21",
     "vue-i18n": "^9.10.1",
     "vue-router": "^4.3.0",
+    "vue3-use-cesium": "^0.0.13",
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {

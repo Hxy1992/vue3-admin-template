@@ -32,6 +32,8 @@ import I18n from "@/languages/index";
 import pinia from "@/stores";
 // errorHandler
 import errorHandler from "@/utils/errorHandler";
+// 地图样式
+import "vue3-use-cesium/style";
 
 const app = createApp(App);
 

@@ -2,6 +2,11 @@
   <el-config-provider :locale="locale" :size="assemblySize" :button="buttonConfig">
     <router-view></router-view>
   </el-config-provider>
+  <z-map-base>
+    <z-map-tool :imagerys="defaultImagerys" />
+    <z-map-scale />
+    <z-map-status />
+  </z-map-base>
 </template>
 
 <script setup lang="ts">
@@ -14,8 +19,28 @@ import { LanguageType } from "./stores/interface";
 import { useGlobalStore } from "@/stores/modules/global";
 import en from "element-plus/es/locale/lang/en";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
+import { ZMapBase, ZMapTool, ZMapScale, ZMapStatus } from "vue3-use-cesium";
+import elecImg from "@/assets/images/elec.jpg";
+import satelliteImg from "@/assets/images/satellite.jpg";
 
 const globalStore = useGlobalStore();
+const defaultImagerys = [
+  {
+    label: "高德卫星(无偏移)",
+    type: "gd-img",
+    backgroundImage: satelliteImg
+  },
+  {
+    label: "高德电子(无偏移)",
+    type: "gd-vec",
+    backgroundImage: elecImg
+  },
+  {
+    label: "OSM",
+    type: "osm-normal",
+    backgroundImage: elecImg
+  }
+];
 
 // init theme
 const { initTheme } = useTheme();

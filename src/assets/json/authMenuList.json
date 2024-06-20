@@ -30,6 +30,37 @@
       }
     },
     {
+      "path": "/cesiumMap",
+      "name": "cesiumMap",
+      "redirect": "/cesiumMap/demo",
+      "meta": {
+        "icon": "Odometer",
+        "title": "cesium地图",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/cesiumMap/demo",
+          "name": "cesiumMapDemo",
+          "component": "/cesiumMap/demo",
+          "meta": {
+            "icon": "Menu",
+            "title": "地图demo",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": false,
+            "hasMap": true
+          }
+        }
+      ]
+    },
+    {
       "path": "/proTable",
       "name": "proTable",
       "redirect": "/proTable/useProTable",
