@@ -20,10 +20,18 @@ import { useGlobalStore } from "@/stores/modules/global";
 import en from "element-plus/es/locale/lang/en";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 import { ZMapBase, ZMapTool, ZMapScale, ZMapStatus } from "vue3-use-cesium";
-import elecImg from "@/assets/images/elec.jpg";
 import satelliteImg from "@/assets/images/satellite.jpg";
+import gdEle from "@/assets/images/tileLogo/高德电子.png";
+import osmEle from "@/assets/images/tileLogo/OSM.png";
+import arcgisColor from "@/assets/images/tileLogo/ArcGIS彩色.png";
+import arcgisGray from "@/assets/images/tileLogo/ArcGIS灰色.png";
+import arcgisMidnightblue from "@/assets/images/tileLogo/ArcGIS午夜蓝.png";
+import cartoDarkall from "@/assets/images/tileLogo/OSM黑.png";
+import cartoLightall from "@/assets/images/tileLogo/OSM白.png";
+import tencentVec from "@/assets/images/tileLogo/腾讯电子.png";
 
 const globalStore = useGlobalStore();
+
 const defaultImagerys = [
   {
     label: "高德卫星(无偏移)",
@@ -33,12 +41,57 @@ const defaultImagerys = [
   {
     label: "高德电子(无偏移)",
     type: "gd-vec",
-    backgroundImage: elecImg
+    backgroundImage: gdEle
   },
   {
-    label: "OSM",
+    label: "OSM(无偏移)",
     type: "osm-normal",
-    backgroundImage: elecImg
+    backgroundImage: osmEle
+  },
+  {
+    label: "arcgis彩色",
+    type: "geoq-colour",
+    backgroundImage: arcgisColor
+  },
+  {
+    label: "arcgis灰色",
+    type: "geoq-gray",
+    backgroundImage: arcgisGray
+  },
+  {
+    label: "arcgis午夜蓝",
+    type: "geoq-midnightblue",
+    backgroundImage: arcgisMidnightblue
+  },
+  {
+    label: "OMS黑(无偏移)",
+    type: "carto-darkall",
+    backgroundImage: cartoDarkall
+  },
+  {
+    label: "OSM白(无偏移)",
+    type: "carto-lightall",
+    backgroundImage: cartoLightall
+  },
+  {
+    label: "百度电子",
+    type: "bd-vec",
+    backgroundImage: gdEle
+  },
+  {
+    label: "百度卫星",
+    type: "bd-img",
+    backgroundImage: satelliteImg
+  },
+  {
+    label: "腾讯地图",
+    type: "tencent-vec",
+    backgroundImage: tencentVec
+  },
+  {
+    label: "腾讯卫星",
+    type: "tencent-img",
+    backgroundImage: satelliteImg
   }
 ];
 
