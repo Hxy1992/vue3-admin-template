@@ -18,6 +18,7 @@ declare namespace Menu {
     isAffix: boolean;
     isKeepAlive: boolean;
     hasMap?: boolean;
+    isFill?: boolean;
   }
 }
 

@@ -24,6 +24,8 @@ const routerMode = {
  * @param meta.isFull ==> 菜单是否全屏 (示例：数据大屏页面)
  * @param meta.isAffix ==> 菜单是否固定在标签页中 (首页通常是固定项)
  * @param meta.isKeepAlive ==> 当前路由是否缓存
+ * @param meta.hasMap ==> 当前路由是否包含Cesium地图
+ * @param meta.isFill ==> 当前路由是否填充（无padding）显示
  * */
 const router = createRouter({
   history: routerMode[mode](),

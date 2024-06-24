@@ -3,6 +3,9 @@
   padding: 10px 12px;
   overflow-x: hidden;
   background-color: var(--el-bg-color-page);
+  &.is-fill {
+    padding: 0;
+  }
 }
 .el-footer {
   height: auto;

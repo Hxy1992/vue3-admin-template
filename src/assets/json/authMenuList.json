@@ -55,7 +55,8 @@
             "isFull": false,
             "isAffix": false,
             "isKeepAlive": false,
-            "hasMap": true
+            "hasMap": true,
+            "isFill": true
           }
         }
       ]

@@ -1,7 +1,7 @@
 <template>
   <Maximize v-show="maximize" />
   <Tabs v-show="tabs" />
-  <el-main>
+  <el-main :class="{ 'is-fill': isFill }">
     <router-view v-slot="{ Component, route }">
       <transition appear name="fade-transform" mode="out-in">
         <keep-alive :include="keepAliveName">
@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeUnmount, provide, watch, h } from "vue";
+import { ref, onBeforeUnmount, provide, watch, h, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useDebounceFn } from "@vueuse/core";
 import { useGlobalStore } from "@/stores/modules/global";
@@ -24,12 +24,16 @@ import { useKeepAliveStore } from "@/stores/modules/keepAlive";
 import Maximize from "./components/Maximize.vue";
 import Tabs from "@/layouts/components/Tabs/index.vue";
 import Footer from "@/layouts/components/Footer/index.vue";
+import { useRoute } from "vue-router";
 
 const globalStore = useGlobalStore();
 const { maximize, isCollapse, layout, tabs, footer } = storeToRefs(globalStore);
 
 const keepAliveStore = useKeepAliveStore();
 const { keepAliveName } = storeToRefs(keepAliveStore);
+
+const routeCur = useRoute();
+const isFill = computed(() => routeCur.meta.isFill);
 
 // 注入刷新页面方法
 const isRouterShow = ref(true);
