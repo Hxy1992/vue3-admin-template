@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from "vue-router";
 import { HOME_URL } from "@/config";
 import { getTimeState } from "@/utils";
@@ -108,6 +108,9 @@ onMounted(() => {
       login(loginFormRef.value);
     }
   };
+});
+onBeforeUnmount(() => {
+  document.onkeydown = null;
 });
 </script>
 

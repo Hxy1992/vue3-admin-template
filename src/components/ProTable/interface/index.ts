@@ -134,6 +134,10 @@ export interface ColumnProps<T = any>
    */
   isShow?: boolean | Ref<boolean>;
   /**
+   * 是否在 ColSetting 中可配置
+   */
+  isSetting?: boolean | Ref<boolean>;
+  /**
    * 搜索项配置
    */
   search?: SearchProps | undefined;
