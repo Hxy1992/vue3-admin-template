@@ -48,11 +48,12 @@
 </template>
 
 <script setup lang="ts" name="UploadImg">
-import { ref, computed, inject } from "vue";
-import { generateUUID } from "@/utils";
-import { uploadImg } from "@/api/modules/upload";
-import { ElNotification, formContextKey, formItemContextKey } from "element-plus";
 import type { UploadProps, UploadRequestOptions } from "element-plus";
+import { ElNotification, formContextKey, formItemContextKey } from "element-plus";
+import { computed, inject, ref } from "vue";
+
+import { uploadImg } from "@/api/modules/upload";
+import { generateUUID } from "@/utils";
 
 interface UploadFileProps {
   imageUrl: string; // 图片地址 ==> 必传
@@ -100,7 +101,7 @@ const emit = defineEmits<{
   "update:imageUrl": [value: string];
 }>();
 const handleHttpUpload = async (options: UploadRequestOptions) => {
-  let formData = new FormData();
+  const formData = new FormData();
   formData.append("file", options.file);
   try {
     const api = props.api ?? uploadImg;

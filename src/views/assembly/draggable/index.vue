@@ -19,7 +19,7 @@
 import { ref } from "vue";
 import draggable from "vuedraggable";
 
-let gridList = ref([
+const gridList = ref([
   { id: 1, num: 1 },
   { id: 2, num: 2 },
   { id: 3, num: 3 },

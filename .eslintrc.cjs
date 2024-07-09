@@ -7,6 +7,8 @@ module.exports = {
     node: true,
     es6: true
   },
+  // 插件
+  plugins: ["simple-import-sort"],
   // 指定如何解析语法
   parser: "vue-eslint-parser",
   // 优先级低于 parse 的语法解析配置
@@ -27,11 +29,22 @@ module.exports = {
    * "error" 或 2  ==>  规则作为一个错误（代码不能执行，界面报错）
    */
   rules: {
+    // 导入导出规则
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+
     // eslint (http://eslint.cn/docs/rules)
     "no-var": "error", // 要求使用 let 或 const 而不是 var
     "no-multiple-empty-lines": ["error", { max: 1 }], // 不允许多个空行
-    "prefer-const": "off", // 使用 let 关键字声明但在初始分配后从未重新分配的变量，要求使用 const
     "no-use-before-define": "off", // 禁止在 函数/类/变量 定义之前使用它们
+    "prefer-const": [
+      "warn",
+      {
+        // 优先建议使用const
+        destructuring: "any",
+        ignoreReadBeforeAssign: false
+      }
+    ],
 
     // typeScript (https://typescript-eslint.io/rules)
     "@typescript-eslint/no-unused-vars": "error", // 禁止定义未使用的变量

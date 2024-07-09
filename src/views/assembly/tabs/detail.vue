@@ -9,6 +9,7 @@
 <script setup lang="ts" name="tabsDetail">
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+
 import { useTabsStore } from "@/stores/modules/tabs";
 
 const route = useRoute();

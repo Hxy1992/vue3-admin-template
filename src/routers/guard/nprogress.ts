@@ -1,5 +1,7 @@
 import type { Router } from "vue-router";
+
 import NProgress from "@/config/nprogress";
+
 import { log } from "./helper";
 
 /**

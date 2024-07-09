@@ -5,6 +5,7 @@
 </template>
 <script setup lang="ts" name="GridItem">
 import { computed, inject, Ref, ref, useAttrs, watch } from "vue";
+
 import { BreakPoint, Responsive } from "../interface/index";
 
 type Props = {
@@ -48,8 +49,8 @@ watch(
 const gap = inject("gap", 0);
 const cols = inject("cols", ref(4));
 const style = computed(() => {
-  let span = props[breakPoint.value]?.span ?? props.span;
-  let offset = props[breakPoint.value]?.offset ?? props.offset;
+  const span = props[breakPoint.value]?.span ?? props.span;
+  const offset = props[breakPoint.value]?.offset ?? props.offset;
   if (props.suffix) {
     return {
       gridColumnStart: cols.value - span - offset + 1,

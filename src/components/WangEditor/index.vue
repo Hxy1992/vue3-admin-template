@@ -14,12 +14,14 @@
 </template>
 
 <script setup lang="ts" name="WangEditor">
-import { nextTick, computed, inject, shallowRef, onBeforeUnmount } from "vue";
-import { IToolbarConfig, IEditorConfig } from "@wangeditor/editor";
-import { Editor, Toolbar } from "@wangeditor/editor-for-vue";
-import { uploadImg, uploadVideo } from "@/api/modules/upload";
 import "@wangeditor/editor/dist/css/style.css";
+
+import { IEditorConfig, IToolbarConfig } from "@wangeditor/editor";
+import { Editor, Toolbar } from "@wangeditor/editor-for-vue";
 import { formContextKey, formItemContextKey } from "element-plus";
+import { computed, inject, nextTick, onBeforeUnmount, shallowRef } from "vue";
+
+import { uploadImg, uploadVideo } from "@/api/modules/upload";
 
 // 富文本 DOM 元素
 const editorRef = shallowRef();
@@ -94,7 +96,7 @@ type InsertFnTypeImg = (url: string, alt?: string, href?: string) => void;
 props.editorConfig.MENU_CONF!["uploadImage"] = {
   async customUpload(file: File, insertFn: InsertFnTypeImg) {
     if (!uploadImgValidate(file)) return;
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append("file", file);
     try {
       const { data } = await uploadImg(formData);
@@ -120,7 +122,7 @@ type InsertFnTypeVideo = (url: string, poster?: string) => void;
 props.editorConfig.MENU_CONF!["uploadVideo"] = {
   async customUpload(file: File, insertFn: InsertFnTypeVideo) {
     if (!uploadVideoValidate(file)) return;
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append("file", file);
     try {
       const { data } = await uploadVideo(formData);

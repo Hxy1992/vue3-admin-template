@@ -10,25 +10,27 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, computed } from "vue";
-import { useI18n } from "vue-i18n";
-import { getBrowserLang } from "@/utils";
-import { useTheme } from "@/hooks/useTheme";
 import { ElConfigProvider } from "element-plus";
-import { LanguageType } from "./stores/interface";
-import { useGlobalStore } from "@/stores/modules/global";
 import en from "element-plus/es/locale/lang/en";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
-import { ZMapBase, ZMapTool, ZMapScale, ZMapStatus } from "vue3-use-cesium";
+import { computed, onMounted, reactive } from "vue";
+import { useI18n } from "vue-i18n";
+import { ZMapBase, ZMapScale, ZMapStatus, ZMapTool } from "vue3-use-cesium";
+
 import satelliteImg from "@/assets/images/satellite.jpg";
-import gdEle from "@/assets/images/tileLogo/高德电子.png";
-import osmEle from "@/assets/images/tileLogo/OSM.png";
+import arcgisMidnightblue from "@/assets/images/tileLogo/ArcGIS午夜蓝.png";
 import arcgisColor from "@/assets/images/tileLogo/ArcGIS彩色.png";
 import arcgisGray from "@/assets/images/tileLogo/ArcGIS灰色.png";
-import arcgisMidnightblue from "@/assets/images/tileLogo/ArcGIS午夜蓝.png";
-import cartoDarkall from "@/assets/images/tileLogo/OSM黑.png";
+import osmEle from "@/assets/images/tileLogo/OSM.png";
 import cartoLightall from "@/assets/images/tileLogo/OSM白.png";
+import cartoDarkall from "@/assets/images/tileLogo/OSM黑.png";
 import tencentVec from "@/assets/images/tileLogo/腾讯电子.png";
+import gdEle from "@/assets/images/tileLogo/高德电子.png";
+import { useTheme } from "@/hooks/useTheme";
+import { useGlobalStore } from "@/stores/modules/global";
+import { getBrowserLang } from "@/utils";
+
+import { LanguageType } from "./stores/interface";
 
 const globalStore = useGlobalStore();
 

@@ -11,8 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import ECharts from "@/components/ECharts/index.vue";
 import { ECOption } from "@/components/ECharts/config";
+import ECharts from "@/components/ECharts/index.vue";
+
 import { ranking1, ranking2, ranking3, ranking4 } from "../assets/ranking-icon";
 
 interface ChartProp {
@@ -103,8 +104,8 @@ const option: ECOption = {
       axisLabel: {
         color: "#fff",
         formatter: (value: string) => {
-          let str = value.length > 6 ? value.slice(0, 6) + "..." : value;
-          let index = data.map((item: ChartProp) => item.name).indexOf(value) + 1;
+          const str = value.length > 6 ? value.slice(0, 6) + "..." : value;
+          const index = data.map((item: ChartProp) => item.name).indexOf(value) + 1;
           return ["{" + (index > 3 ? "lg" : "lg" + index) + "|NO." + index + "}", "{title|" + str + "}"].join(" ");
         },
         rich: {
@@ -192,7 +193,7 @@ const option: ECOption = {
       itemStyle: {
         borderRadius: 30,
         color: function (params) {
-          let num = colors.length;
+          const num = colors.length;
           return colors[params.dataIndex % num];
         }
       },

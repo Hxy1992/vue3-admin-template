@@ -44,11 +44,12 @@
 </template>
 
 <script setup lang="ts" name="UploadImgs">
-import { ref, computed, inject, watch } from "vue";
 import { Plus } from "@element-plus/icons-vue";
-import { uploadImg } from "@/api/modules/upload";
-import type { UploadProps, UploadFile, UploadUserFile, UploadRequestOptions } from "element-plus";
+import type { UploadFile, UploadProps, UploadRequestOptions, UploadUserFile } from "element-plus";
 import { ElNotification, formContextKey, formItemContextKey } from "element-plus";
+import { computed, inject, ref, watch } from "vue";
+
+import { uploadImg } from "@/api/modules/upload";
 
 interface UploadFileProps {
   fileList: UploadUserFile[];
@@ -123,7 +124,7 @@ const beforeUpload: UploadProps["beforeUpload"] = rawFile => {
  * @param options upload 所有配置项
  * */
 const handleHttpUpload = async (options: UploadRequestOptions) => {
-  let formData = new FormData();
+  const formData = new FormData();
   formData.append("file", options.file);
   try {
     const api = props.api ?? uploadImg;

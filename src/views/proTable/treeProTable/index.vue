@@ -36,18 +36,19 @@
 </template>
 
 <script setup lang="tsx" name="treeProTable">
-import { onMounted, reactive, ref } from "vue";
-import { User } from "@/api/interface";
-import { genderType } from "@/utils/dict";
-import { useHandleData } from "@/hooks/useHandleData";
-import { ElMessage, ElNotification } from "element-plus";
-import ProTable from "@/components/ProTable/index.vue";
-import TreeFilter from "@/components/TreeFilter/index.vue";
-import ImportExcel from "@/components/ImportExcel/index.vue";
-import UserDrawer from "@/views/proTable/components/UserDrawer.vue";
 import { CirclePlus, Delete, EditPen, View } from "@element-plus/icons-vue";
+import { ElMessage, ElNotification } from "element-plus";
+import { onMounted, reactive, ref } from "vue";
+
+import { User } from "@/api/interface";
+import { addUser, deleteUser, editUser, getUserDepartment, getUserStatus, getUserTreeList } from "@/api/modules/user";
+import ImportExcel from "@/components/ImportExcel/index.vue";
+import ProTable from "@/components/ProTable/index.vue";
 import { ColumnProps, ProTableInstance } from "@/components/ProTable/interface";
-import { getUserTreeList, deleteUser, editUser, addUser, getUserStatus, getUserDepartment } from "@/api/modules/user";
+import TreeFilter from "@/components/TreeFilter/index.vue";
+import { useHandleData } from "@/hooks/useHandleData";
+import { genderType } from "@/utils/dict";
+import UserDrawer from "@/views/proTable/components/UserDrawer.vue";
 
 onMounted(() => {
   getTreeFilter();

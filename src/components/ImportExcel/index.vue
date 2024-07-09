@@ -40,10 +40,11 @@
 </template>
 
 <script setup lang="ts" name="ImportExcel">
-import { ref } from "vue";
-import { useDownload } from "@/hooks/useDownload";
 import { Download } from "@element-plus/icons-vue";
-import { ElNotification, UploadRequestOptions, UploadRawFile } from "element-plus";
+import { ElNotification, UploadRawFile, UploadRequestOptions } from "element-plus";
+import { ref } from "vue";
+
+import { useDownload } from "@/hooks/useDownload";
 
 export interface ExcelParameterProps {
   title: string; // 标题
@@ -81,7 +82,7 @@ const downloadTemp = () => {
 
 // 文件上传
 const uploadExcel = async (param: UploadRequestOptions) => {
-  let excelFormData = new FormData();
+  const excelFormData = new FormData();
   excelFormData.append("file", param.file);
   excelFormData.append("isCover", isCover.value as unknown as Blob);
   await parameter.value.importApi!(excelFormData);

@@ -37,15 +37,16 @@
 </template>
 
 <script setup lang="tsx" name="complexProTable">
-import { reactive, ref } from "vue";
+import { CirclePlus, Delete, Pointer, Refresh } from "@element-plus/icons-vue";
 import { ElMessage } from "element-plus";
-import { User } from "@/api/interface";
-import { useHandleData } from "@/hooks/useHandleData";
-import ProTable from "@/components/ProTable/index.vue";
-import { CirclePlus, Pointer, Delete, Refresh } from "@element-plus/icons-vue";
 import type { TableColumnCtx } from "element-plus/es/components/table/src/table-column/defaults";
-import { ProTableInstance, ColumnProps, HeaderRenderScope } from "@/components/ProTable/interface";
-import { getUserList, deleteUser, resetUserPassWord, getUserStatus, getUserGender } from "@/api/modules/user";
+import { reactive, ref } from "vue";
+
+import { User } from "@/api/interface";
+import { deleteUser, getUserGender, getUserList, getUserStatus, resetUserPassWord } from "@/api/modules/user";
+import ProTable from "@/components/ProTable/index.vue";
+import { ColumnProps, HeaderRenderScope, ProTableInstance } from "@/components/ProTable/interface";
+import { useHandleData } from "@/hooks/useHandleData";
 
 // ProTable 实例
 const proTable = ref<ProTableInstance>();

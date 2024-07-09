@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
-import { GlobalState } from "@/stores/interface";
+
 import { DEFAULT_PRIMARY } from "@/config";
 import piniaPersistConfig from "@/stores/helper/persist";
+import { GlobalState } from "@/stores/interface";
 
 export const useGlobalStore = defineStore({
   id: "hi-vue3-admin-global",

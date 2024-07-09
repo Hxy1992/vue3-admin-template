@@ -1,5 +1,7 @@
 import type { Router } from "vue-router";
-import { log } from "./helper";
+import { initMap } from "vue3-use-cesium";
+
+import { LOGIN_URL } from "@/config";
 // import { TabsStore } from "@/stores/modules/tabs";
 // import { KeepAliveStore } from "@/stores/modules/keepAlive";
 // import { loaderScript, loadMineScreen } from "@/utils/loader";
@@ -10,8 +12,8 @@ import { log } from "./helper";
 // import { createSocket } from "@/api/socket";
 // import { BaseMapEnum } from "@/enums/mittBusEnum";
 import { useUserStore } from "@/stores/modules/user";
-import { LOGIN_URL } from "@/config";
-import { initMap } from "vue3-use-cesium";
+
+import { log } from "./helper";
 
 /**
  * 系统初始化 前置导航守卫

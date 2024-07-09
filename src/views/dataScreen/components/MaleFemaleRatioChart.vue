@@ -19,15 +19,15 @@
 </template>
 
 <script setup lang="ts">
-import ECharts from "@/components/ECharts/index.vue";
 import { ECOption } from "@/components/ECharts/config";
+import ECharts from "@/components/ECharts/index.vue";
 
 interface ChartProp {
   man: number;
   woman: number;
 }
 
-let data: ChartProp = {
+const data: ChartProp = {
   man: 0.6,
   woman: 0.4
 };

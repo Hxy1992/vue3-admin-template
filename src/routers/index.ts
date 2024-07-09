@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
-import { staticRouter, errorRouter } from "@/routers/modules/staticRouter";
+
+import { errorRouter, staticRouter } from "@/routers/modules/staticRouter";
+
 import { setupRouterGuard } from "./guard/index";
 
 const mode = import.meta.env.VITE_ROUTER_MODE;

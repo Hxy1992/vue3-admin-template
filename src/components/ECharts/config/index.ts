@@ -1,36 +1,37 @@
-import * as echarts from "echarts/core";
-import { BarChart, LineChart, LinesChart, PieChart, ScatterChart, RadarChart, GaugeChart } from "echarts/charts";
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  DatasetComponent,
-  TransformComponent,
-  LegendComponent,
-  PolarComponent,
-  GeoComponent,
-  ToolboxComponent,
-  DataZoomComponent
-} from "echarts/components";
-import { LabelLayout, UniversalTransition } from "echarts/features";
-import { CanvasRenderer } from "echarts/renderers";
+import "echarts-liquidfill";
+
 import type {
   BarSeriesOption,
+  GaugeSeriesOption,
   LineSeriesOption,
   LinesSeriesOption,
   PieSeriesOption,
-  ScatterSeriesOption,
   RadarSeriesOption,
-  GaugeSeriesOption
+  ScatterSeriesOption
 } from "echarts/charts";
+import { BarChart, GaugeChart, LineChart, LinesChart, PieChart, RadarChart, ScatterChart } from "echarts/charts";
 import type {
-  TitleComponentOption,
-  TooltipComponentOption,
+  DatasetComponentOption,
   GridComponentOption,
-  DatasetComponentOption
+  TitleComponentOption,
+  TooltipComponentOption
+} from "echarts/components";
+import {
+  DatasetComponent,
+  DataZoomComponent,
+  GeoComponent,
+  GridComponent,
+  LegendComponent,
+  PolarComponent,
+  TitleComponent,
+  ToolboxComponent,
+  TooltipComponent,
+  TransformComponent
 } from "echarts/components";
 import type { ComposeOption } from "echarts/core";
-import "echarts-liquidfill";
+import * as echarts from "echarts/core";
+import { LabelLayout, UniversalTransition } from "echarts/features";
+import { CanvasRenderer } from "echarts/renderers";
 
 export type ECOption = ComposeOption<
   | BarSeriesOption

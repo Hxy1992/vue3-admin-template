@@ -20,10 +20,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { HOME_URL } from "@/config";
-import { useRoute, useRouter } from "vue-router";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
+import { HOME_URL } from "@/config";
 import { useAuthStore } from "@/stores/modules/auth";
 import { useGlobalStore } from "@/stores/modules/global";
 

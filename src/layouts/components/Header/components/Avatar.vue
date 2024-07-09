@@ -24,12 +24,14 @@
 </template>
 
 <script setup lang="ts">
+import { ElMessage, ElMessageBox } from "element-plus";
 import { ref } from "vue";
-import { LOGIN_URL } from "@/config";
 import { useRouter } from "vue-router";
+
 import { logoutApi } from "@/api/modules/login";
+import { LOGIN_URL } from "@/config";
 import { useUserStore } from "@/stores/modules/user";
-import { ElMessageBox, ElMessage } from "element-plus";
+
 import InfoDialog from "./InfoDialog.vue";
 import PasswordDialog from "./PasswordDialog.vue";
 

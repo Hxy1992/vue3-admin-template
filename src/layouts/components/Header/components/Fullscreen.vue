@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
 import { ElMessage } from "element-plus";
 import screenfull from "screenfull";
+import { onMounted, ref } from "vue";
 
 const isFullscreen = ref(screenfull.isFullscreen);
 

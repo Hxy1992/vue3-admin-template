@@ -7,8 +7,9 @@
 
 <script setup lang="ts">
 import dayjs from "dayjs";
-import ECharts from "@/components/ECharts/index.vue";
+
 import { ECOption } from "@/components/ECharts/config";
+import ECharts from "@/components/ECharts/index.vue";
 import { randomNum } from "@/utils";
 
 const initDate = (): string[] => {
@@ -37,8 +38,8 @@ const option: ECOption = {
     trigger: "axis",
     confine: true,
     formatter: params => {
-      let tipData = (params as { name: string; value: string }[])[0];
-      let html = `<div class="line-chart-bg">
+      const tipData = (params as { name: string; value: string }[])[0];
+      const html = `<div class="line-chart-bg">
                         <span style="">${tipData.name} <i >${tipData.value}</i> 人次访问</span>
                     </div>`;
       return html;

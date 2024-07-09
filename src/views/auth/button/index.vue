@@ -35,8 +35,9 @@
 </template>
 
 <script setup lang="ts" name="authButton">
+import { CirclePlus, Delete, Download, EditPen, Upload } from "@element-plus/icons-vue";
+
 import { useAuthButtons } from "@/hooks/useAuthButtons";
-import { CirclePlus, Delete, EditPen, Download, Upload } from "@element-plus/icons-vue";
 
 const { BUTTONS } = useAuthButtons();
 </script>

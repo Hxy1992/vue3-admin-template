@@ -1,10 +1,12 @@
+import { ElMessage, ElNotification } from "element-plus";
 import type { Router } from "vue-router";
-import { createSystemInitBefore } from "./systemInit";
-import { createNProgressAfter, createNProgressBefore } from "./nprogress";
+
+import { AxiosCanceler } from "@/api/helper/axiosCancel";
+
 import { createAuthGuard } from "./auth";
 import { log } from "./helper";
-import { ElMessage, ElNotification } from "element-plus";
-import { AxiosCanceler } from "@/api/helper/axiosCancel";
+import { createNProgressAfter, createNProgressBefore } from "./nprogress";
+import { createSystemInitBefore } from "./systemInit";
 
 /**
  * 导航守卫

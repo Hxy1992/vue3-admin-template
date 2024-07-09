@@ -36,11 +36,12 @@
 
 <script setup lang="ts" name="layoutTransverse">
 import { computed } from "vue";
-import { useAuthStore } from "@/stores/modules/auth";
 import { useRoute, useRouter } from "vue-router";
-import Main from "@/layouts/components/Main/index.vue";
+
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
+import Main from "@/layouts/components/Main/index.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
+import { useAuthStore } from "@/stores/modules/auth";
 
 const title = import.meta.env.VITE_GLOB_APP_TITLE;
 

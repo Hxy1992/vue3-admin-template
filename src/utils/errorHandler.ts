@@ -6,7 +6,7 @@ import { ElNotification } from "element-plus";
 const errorHandler = (error: any) => {
   // 过滤 HTTP 请求错误
   if (error.status || error.status == 0) return false;
-  let errorMap: { [key: string]: string } = {
+  const errorMap: { [key: string]: string } = {
     InternalError: "Javascript引擎内部错误",
     ReferenceError: "未找到对象",
     TypeError: "使用了错误的类型或对象",
@@ -15,7 +15,7 @@ const errorHandler = (error: any) => {
     EvalError: "错误的使用了Eval",
     URIError: "URI错误"
   };
-  let errorName = errorMap[error.name] || "未知错误";
+  const errorName = errorMap[error.name] || "未知错误";
   ElNotification({
     title: errorName,
     message: error,

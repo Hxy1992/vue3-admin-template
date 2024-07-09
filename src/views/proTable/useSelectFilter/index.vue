@@ -40,30 +40,31 @@
   </div>
 </template>
 <script setup lang="ts" name="useSelectFilter">
-import { ref, reactive, onMounted, watch } from "vue";
-import { User } from "@/api/interface";
+import { CirclePlus, Delete, Download, EditPen, Pointer, Refresh, Upload, View } from "@element-plus/icons-vue";
 import { ElMessage, ElMessageBox } from "element-plus";
-import { useHandleData } from "@/hooks/useHandleData";
-import { useDownload } from "@/hooks/useDownload";
-import { genderType, userStatus } from "@/utils/dict";
-import ProTable from "@/components/ProTable/index.vue";
-import TreeFilter from "@/components/TreeFilter/index.vue";
-import ImportExcel from "@/components/ImportExcel/index.vue";
-import UserDrawer from "@/views/proTable/components/UserDrawer.vue";
-import SelectFilter from "@/components/SelectFilter/index.vue";
-import { ProTableInstance, ColumnProps } from "@/components/ProTable/interface";
-import { CirclePlus, Delete, EditPen, Pointer, Download, Upload, View, Refresh } from "@element-plus/icons-vue";
+import { onMounted, reactive, ref, watch } from "vue";
+
+import { User } from "@/api/interface";
 import {
-  getUserList,
+  addUser,
+  BatchAddUser,
   deleteUser,
   editUser,
-  addUser,
-  resetUserPassWord,
   exportUserInfo,
-  BatchAddUser,
   getUserDepartment,
-  getUserRole
+  getUserList,
+  getUserRole,
+  resetUserPassWord
 } from "@/api/modules/user";
+import ImportExcel from "@/components/ImportExcel/index.vue";
+import ProTable from "@/components/ProTable/index.vue";
+import { ColumnProps, ProTableInstance } from "@/components/ProTable/interface";
+import SelectFilter from "@/components/SelectFilter/index.vue";
+import TreeFilter from "@/components/TreeFilter/index.vue";
+import { useDownload } from "@/hooks/useDownload";
+import { useHandleData } from "@/hooks/useHandleData";
+import { genderType, userStatus } from "@/utils/dict";
+import UserDrawer from "@/views/proTable/components/UserDrawer.vue";
 
 // ProTable 实例
 const proTable = ref<ProTableInstance>();

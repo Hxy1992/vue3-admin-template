@@ -90,7 +90,7 @@ const select = (item: SelectDataProps, option: OptionsProps) => {
     if (item.options[0].value === option.value) selected.value[item.key] = [option.value];
     // 如果选择的值已经选中了，则删除选中的值
     if (selected.value[item.key].includes(option.value)) {
-      let currentIndex = selected.value[item.key].findIndex((s: any) => s === option.value);
+      const currentIndex = selected.value[item.key].findIndex((s: any) => s === option.value);
       selected.value[item.key].splice(currentIndex, 1);
       // 当全部删光时，把第第一个值选中
       if (selected.value[item.key].length == 0) selected.value[item.key] = [item.options[0].value];

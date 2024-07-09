@@ -17,13 +17,15 @@
 </template>
 
 <script setup lang="ts">
+import { TabPaneName, TabsPaneContext } from "element-plus";
 import Sortable from "sortablejs";
-import { ref, computed, watch, onMounted } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+
+import { useAuthStore } from "@/stores/modules/auth";
 import { useGlobalStore } from "@/stores/modules/global";
 import { useTabsStore } from "@/stores/modules/tabs";
-import { useAuthStore } from "@/stores/modules/auth";
-import { TabsPaneContext, TabPaneName } from "element-plus";
+
 import MoreButton from "./components/MoreButton.vue";
 
 const route = useRoute();

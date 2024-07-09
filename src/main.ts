@@ -1,5 +1,3 @@
-import { createApp } from "vue";
-import App from "./App.vue";
 // reset style sheet
 import "@/styles/reset.scss";
 // CSS common style sheet
@@ -18,22 +16,27 @@ import "@/styles/element-dark.scss";
 import "@/styles/element.scss";
 // svg icons
 import "virtual:svg-icons-register";
-// element plus
-import ElementPlus from "element-plus";
+// 地图样式
+import "vue3-use-cesium/style";
+
 // element icons
 import * as Icons from "@element-plus/icons-vue";
+// element plus
+import ElementPlus from "element-plus";
+import { createApp } from "vue";
+
 // custom directives
 import directives from "@/directives/index";
-// vue Router
-import router from "@/routers";
 // vue i18n
 import I18n from "@/languages/index";
+// vue Router
+import router from "@/routers";
 // pinia store
 import pinia from "@/stores";
 // errorHandler
 import errorHandler from "@/utils/errorHandler";
-// 地图样式
-import "vue3-use-cesium/style";
+
+import App from "./App.vue";
 
 const app = createApp(App);
 

@@ -33,13 +33,15 @@
   </div>
 </template>
 <script setup lang="ts" name="SearchForm">
+import { ArrowDown, ArrowUp, Delete, Search } from "@element-plus/icons-vue";
 import { computed, ref } from "vue";
-import { ColumnProps } from "@/components/ProTable/interface";
-import { BreakPoint } from "@/components/Grid/interface";
-import { Delete, Search, ArrowDown, ArrowUp } from "@element-plus/icons-vue";
-import SearchFormItem from "./components/SearchFormItem.vue";
-import Grid from "@/components/Grid/index.vue";
+
 import GridItem from "@/components/Grid/components/GridItem.vue";
+import Grid from "@/components/Grid/index.vue";
+import { BreakPoint } from "@/components/Grid/interface";
+import { ColumnProps } from "@/components/ProTable/interface";
+
+import SearchFormItem from "./components/SearchFormItem.vue";
 
 interface ProTableProps {
   columns?: ColumnProps[]; // 搜索配置列

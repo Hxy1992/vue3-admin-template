@@ -6,19 +6,20 @@
 
 <script setup lang="ts" name="Grid">
 import {
-  ref,
-  watch,
-  useSlots,
   computed,
-  provide,
+  onActivated,
   onBeforeMount,
+  onDeactivated,
   onMounted,
   onUnmounted,
-  onDeactivated,
-  onActivated,
+  provide,
+  ref,
+  useSlots,
+  VNode,
   VNodeArrayChildren,
-  VNode
+  watch
 } from "vue";
+
 import type { BreakPoint } from "./interface/index";
 
 type Props = {
@@ -53,7 +54,7 @@ onDeactivated(() => {
 
 // 监听屏幕变化
 const resize = (e: UIEvent) => {
-  let width = (e.target as Window).innerWidth;
+  const width = (e.target as Window).innerWidth;
   switch (!!width) {
     case width < 768:
       breakPoint.value = "xs";
@@ -77,7 +78,7 @@ const resize = (e: UIEvent) => {
 provide("gap", Array.isArray(props.gap) ? props.gap[0] : props.gap);
 
 // 注入响应式断点
-let breakPoint = ref<BreakPoint>("xl");
+const breakPoint = ref<BreakPoint>("xl");
 provide("breakPoint", breakPoint);
 
 // 注入要开始折叠的 index
@@ -95,7 +96,7 @@ provide("cols", gridCols);
 const slots = useSlots().default!();
 
 const findIndex = () => {
-  let fields: VNodeArrayChildren = [];
+  const fields: VNodeArrayChildren = [];
   let suffix: VNode | null = null;
   slots.forEach((slot: any) => {
     // suffix

@@ -28,20 +28,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
-import { useRouter } from "vue-router";
-import { HOME_URL } from "@/config";
-import { getTimeState } from "@/utils";
-import { Login } from "@/api/interface";
-import { ElNotification } from "element-plus";
-import { loginApi } from "@/api/modules/login";
-import { useUserStore } from "@/stores/modules/user";
-import { useTabsStore } from "@/stores/modules/tabs";
-import { useKeepAliveStore } from "@/stores/modules/keepAlive";
-import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
 import type { ElForm } from "element-plus";
+import { ElNotification } from "element-plus";
 import md5 from "md5";
+import { onBeforeUnmount, onMounted, reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+
+import { Login } from "@/api/interface";
+import { loginApi } from "@/api/modules/login";
+import { HOME_URL } from "@/config";
+import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
+import { useKeepAliveStore } from "@/stores/modules/keepAlive";
+import { useTabsStore } from "@/stores/modules/tabs";
+import { useUserStore } from "@/stores/modules/user";
+import { getTimeState } from "@/utils";
 
 const router = useRouter();
 const userStore = useUserStore();

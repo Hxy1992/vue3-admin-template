@@ -1,6 +1,7 @@
-import { VNode, ComponentPublicInstance, Ref } from "vue";
-import { BreakPoint, Responsive } from "@/components/Grid/interface";
 import { TableColumnCtx } from "element-plus/es/components/table/src/table-column/defaults";
+import { ComponentPublicInstance, Ref, VNode } from "vue";
+
+import { BreakPoint, Responsive } from "@/components/Grid/interface";
 import { ProTableProps } from "@/components/ProTable/index.vue";
 import ProTable from "@/components/ProTable/index.vue";
 

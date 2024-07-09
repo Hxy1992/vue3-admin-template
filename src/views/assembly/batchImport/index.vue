@@ -18,14 +18,15 @@
 </template>
 
 <script setup lang="ts" name="batchImport">
-import { ref } from "vue";
-import { exportUserInfo, BatchAddUser } from "@/api/modules/user";
 import { Upload } from "@element-plus/icons-vue";
+import { ref } from "vue";
+
+import { BatchAddUser, exportUserInfo } from "@/api/modules/user";
 import ImportExcel from "@/components/ImportExcel/index.vue";
 
 const importRef = ref();
 const batchAdd = () => {
-  let params = {
+  const params = {
     title: "数据",
     tempApi: exportUserInfo,
     importApi: BatchAddUser

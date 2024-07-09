@@ -3,12 +3,14 @@
 </template>
 
 <script setup lang="ts" name="ECharts">
-import { ref, onMounted, onBeforeUnmount, watch, computed, markRaw, nextTick, onActivated } from "vue";
-import { EChartsType, ECElementEvent } from "echarts/core";
-import echarts, { ECOption } from "./config";
 import { useDebounceFn } from "@vueuse/core";
-import { useGlobalStore } from "@/stores/modules/global";
+import { ECElementEvent, EChartsType } from "echarts/core";
 import { storeToRefs } from "pinia";
+import { computed, markRaw, nextTick, onActivated, onBeforeUnmount, onMounted, ref, watch } from "vue";
+
+import { useGlobalStore } from "@/stores/modules/global";
+
+import echarts, { ECOption } from "./config";
 
 interface Props {
   option: ECOption;

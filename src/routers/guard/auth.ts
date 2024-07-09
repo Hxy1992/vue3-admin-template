@@ -1,9 +1,11 @@
 import type { Router } from "vue-router";
-import { log, resetRouter } from "./helper";
-import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
-import { useUserStore } from "@/stores/modules/user";
-import { useAuthStore } from "@/stores/modules/auth";
+
 import { LOGIN_URL, ROUTER_WHITE_LIST } from "@/config";
+import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
+import { useAuthStore } from "@/stores/modules/auth";
+import { useUserStore } from "@/stores/modules/user";
+
+import { log, resetRouter } from "./helper";
 
 /**
  * 权限导航守卫

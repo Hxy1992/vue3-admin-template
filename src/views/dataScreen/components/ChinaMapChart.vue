@@ -9,6 +9,7 @@
 <script setup lang="ts">
 import echarts, { ECOption } from "@/components/ECharts/config";
 import ECharts from "@/components/ECharts/index.vue";
+
 import mapJson from "../assets/china.json";
 
 echarts.registerMap("china", mapJson as Parameters<typeof echarts.registerMap>[1]);

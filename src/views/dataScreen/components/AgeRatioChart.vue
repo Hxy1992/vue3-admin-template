@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import ECharts from "@/components/ECharts/index.vue";
 import { ECOption } from "@/components/ECharts/config";
+import ECharts from "@/components/ECharts/index.vue";
 
 interface ChartProp {
   value: number;
@@ -15,7 +15,7 @@ interface ChartProp {
   percentage: string;
 }
 
-let data: ChartProp[] = [
+const data: ChartProp[] = [
   { value: 200, name: "10岁以下", percentage: "16%" },
   { value: 110, name: "10 - 18岁", percentage: "8%" },
   { value: 150, name: "18 - 30岁", percentage: "12%" },

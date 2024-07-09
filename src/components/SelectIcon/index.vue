@@ -29,8 +29,8 @@
 </template>
 
 <script setup lang="ts" name="SelectIcon">
-import { ref, computed } from "vue";
 import * as Icons from "@element-plus/icons-vue";
+import { computed, ref } from "vue";
 
 interface SelectIconProps {
   iconValue: string;
@@ -77,7 +77,7 @@ const inputValue = ref("");
 const customIcons: { [key: string]: any } = Icons;
 const iconsList = computed((): { [key: string]: any } => {
   if (!inputValue.value) return Icons;
-  let result: { [key: string]: any } = {};
+  const result: { [key: string]: any } = {};
   for (const key in customIcons) {
     if (key.toLowerCase().indexOf(inputValue.value.toLowerCase()) > -1) result[key] = customIcons[key];
   }
