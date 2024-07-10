@@ -56,14 +56,13 @@ export function createSystemInitBefore(router: Router) {
 
     // 创建websocket
     // createSocket();
-
     // CDN
     if (to.meta.hasMap) {
       // CDN
       await initMap(
         [
-          `https://unpkg.com/cesium@1.105.0/Build/Cesium/Cesium.js`,
-          `https://unpkg.com/cesium@1.105.0/Build/Cesium/Widgets/widgets.css`
+          `https://unpkg.com/cesium@1.119.0/Build/Cesium/Cesium.js`,
+          `https://unpkg.com/cesium@1.119.0/Build/Cesium/Widgets/widgets.css`
         ],
         {
           imagery: "gd-img"

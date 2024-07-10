@@ -69,8 +69,8 @@ dependencies:
     specifier: ^4.4.0
     version: 4.4.0(vue@3.4.30)
   vue3-use-cesium:
-    specifier: ^0.0.15
-    version: 0.0.15(lodash-es@4.17.21)(vue@3.4.30)
+    specifier: ^0.0.16
+    version: 0.0.16(lodash-es@4.17.21)(vue@3.4.30)
   vuedraggable:
     specifier: ^4.1.0
     version: 4.1.0(vue@3.4.30)
@@ -9125,8 +9125,8 @@ packages:
       typescript: 5.5.2
     dev: true
 
-  /vue3-use-cesium@0.0.15(lodash-es@4.17.21)(vue@3.4.30):
-    resolution: {integrity: sha512-ZWrn5dn1qb6RArpIlag8beW+GvAAiasuN6w2XrUdAflvx+XXD/+YwKbAcW2IfZDibbHDtJLMkMb7cY8P1xjRIg==}
+  /vue3-use-cesium@0.0.16(lodash-es@4.17.21)(vue@3.4.30):
+    resolution: {integrity: sha512-j7/gMqkeT58Dl5bCenVJkzLQNLI0P7hq7/kmdyOqdeZ7izo6OTbwFovEkO6p9GsSCFV+mYxxkBHzM312Q0iGUQ==}
     peerDependencies:
       lodash-es: ^4.17.21
       vue: ^3.2.37
