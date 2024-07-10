@@ -13,3 +13,4 @@ dist
 /bin
 /mock/*
 stats.html
+Cesium.d.ts

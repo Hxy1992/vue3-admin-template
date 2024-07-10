@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-declaration-merging */
+/* eslint-disable no-var */
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
 declare namespace Cesium {
   /**
  * Enum containing WebGL Constant values by name.
@@ -1509,7 +1512,6 @@ const geometry = Cesium.BoxOutlineGeometry.createGeometry(box);
     ]));
     const box = Cesium.BoxOutlineGeometry.fromAxisAlignedBoundingBox(aabb);
     
-     
      * @param boundingBox - A description of the AxisAlignedBoundingBox.
      */
     static fromAxisAlignedBoundingBox(boundingBox: AxisAlignedBoundingBox): BoxOutlineGeometry;
@@ -27393,7 +27395,6 @@ camera.frustum.far = 2.0;
         }
     });
     
-    
     // 4. View rectangle with a top-down view
     viewer.camera.setView({
         destination : Cesium.Rectangle.fromDegrees(west, south, east, north)
@@ -42070,7 +42071,6 @@ This type describes an interface and is not intended to be instantiated directly
      * @example
      * sun = sun && sun.destroy();
     
-     
      */
     destroy(): void;
   }
