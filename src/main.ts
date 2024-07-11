@@ -19,11 +19,11 @@ import "virtual:svg-icons-register";
 // 地图样式
 import "vue3-use-cesium/style";
 
-// element icons
-import * as Icons from "@element-plus/icons-vue";
+import { createApp } from "vue";
 // element plus
 import ElementPlus from "element-plus";
-import { createApp } from "vue";
+// element icons
+import * as Icons from "@element-plus/icons-vue";
 
 // custom directives
 import directives from "@/directives/index";
