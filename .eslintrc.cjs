@@ -30,8 +30,8 @@ module.exports = {
    */
   rules: {
     // 导入导出规则
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": "off",
+    "simple-import-sort/exports": "off",
 
     // eslint (http://eslint.cn/docs/rules)
     "no-var": "error", // 要求使用 let 或 const 而不是 var
